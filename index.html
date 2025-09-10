@@ -18,7 +18,15 @@
     .navbar-blur{ backdrop-filter: blur(8px); background: color-mix(in lab, var(--bs-body-bg) 80%, transparent); }
   </style>
 </head>
-
+ <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    netlifyIdentity.on('login', () => {
+      // Après une validation via email (invite/reset), renvoyer l'utilisateur vers l'admin
+      location.replace('/admin/');
+    });
+  }
+</script>
 <body>
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg sticky-top navbar-blur border-bottom">
@@ -169,15 +177,7 @@
     })();
   </script>
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    netlifyIdentity.on('login', () => {
-      // Après une validation via email (invite/reset), renvoyer l'utilisateur vers l'admin
-      location.replace('/admin/');
-    });
-  }
-</script>
+   
 
 </body>
 </html>
