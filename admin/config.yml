@@ -1,58 +1,48 @@
 backend:
-label: "Contenu du site"
-name: "site"
-format: "json"
+field:
+label: Tag
+name: tag
+widget: string
+- label: "Texte CTA"
+name: cta
+widget: string
+default: "Voir détails"
+- label: Lien
+name: href
+widget: string
+required: false
+
+
+- label: Formation
+name: education
+widget: list
 fields:
-- { label: "Titre (hero)", name: "hero.title", widget: "text" }
-- { label: "Accroche (hero)", name: "hero.lead", widget: "text" }
-- { label: "Avatar (image)", name: "hero.avatar", widget: "image", required: false }
-- label: "Statistiques"
-name: "stats"
-widget: "list"
+- label: Titre
+name: title
+widget: string
+- label: Sous-titre
+name: sub
+widget: string
+required: false
+- label: Points
+name: bullets
+widget: list
+field:
+label: Point
+name: point
+widget: string
+
+
+- label: Contact
+name: contact
+widget: object
 fields:
-- { label: "Clé", name: "k", widget: "string" }
-- { label: "Valeur", name: "v", widget: "string" }
-- label: "À propos"
-name: "about"
-widget: "object"
-fields:
-- { label: "Paragraphe 1", name: "p1", widget: "text" }
-- { label: "Paragraphe 2", name: "p2", widget: "text" }
-- { label: "Badges", name: "badges", widget: "list", field: {label: "Badge", name: "badge", widget: "string"} }
-- label: "Compétences"
-name: "skills"
-widget: "list"
-fields:
-- { label: "Titre", name: "title", widget: "string" }
-- { label: "Éléments", name: "items", widget: "list", field: { label: "Élément", name: "item", widget: "string" } }
-- label: "Expérience"
-name: "experience"
-widget: "list"
-fields:
-- { label: "Rôle", name: "role", widget: "string" }
-- { label: "Période", name: "time", widget: "string" }
-- { label: "Badge", name: "badge", widget: "string", required: false }
-- { label: "Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
-- label: "Projets"
-name: "projects"
-widget: "list"
-fields:
-- { label: "Nom", name: "name", widget: "string" }
-- { label: "Description", name: "desc", widget: "text" }
-- { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
-- { label: "Texte CTA", name: "cta", widget: "string", default: "Voir détails" }
-- { label: "Lien", name: "href", widget: "string", required: false }
-- label: "Formation"
-name: "education"
-widget: "list"
-fields:
-- { label: "Titre", name: "title", widget: "string" }
-- { label: "Sous-titre", name: "sub", widget: "string", required: false }
-- { label: "Points", name: "bullets", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
-- label: "Contact"
-name: "contact"
-widget: "object"
-fields:
-- { label: "Email", name: "email", widget: "string" }
-- { label: "LinkedIn", name: "linkedin", widget: "string" }
-- { label: "GitHub", name: "github", widget: "string" }
+- label: Email
+name: email
+widget: string
+- label: LinkedIn
+name: linkedin
+widget: string
+- label: GitHub
+name: github
+widget: string
