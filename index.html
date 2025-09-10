@@ -1,0 +1,54 @@
+<!doctype html>
+(content.experience||[]).forEach(e => {
+const col = document.createElement('div'); col.className = 'col-12';
+col.innerHTML = `<div class="card border-0 shadow-sm card-hover h-100"><div class="card-body"><div class="d-flex justify-content-between flex-wrap gap-2"><div><h3 class="h6 mb-0">${e.role}</h3><small class="text-body-secondary">${e.time}</small></div><span class="badge rounded-pill badge-skill">${e.badge||''}</span></div><ul class="small text-body-secondary mt-3 mb-0 ps-3">${(e.points||[]).map(p=>`<li>${p}</li>`).join('')}</ul></div></div>`;
+list.appendChild(col);
+});
+};
+
+
+const renderProjects = (content) => {
+const grid = el('#projectsGrid'); grid.innerHTML = '';
+(content.projects||[]).forEach(p => {
+const col = document.createElement('div'); col.className = 'col-md-6 col-lg-3';
+col.innerHTML = `<div class="card h-100 border-0 shadow-sm card-hover"><div class="card-body"><div class="ratio ratio-16x9 rounded-3 bg-body-secondary mb-2"></div><h3 class="h6">${p.name}</h3><p class="small text-body-secondary mb-2">${p.desc}</p><div class="d-flex flex-wrap gap-1 mb-2">${(p.tags||[]).map(t=>`<span class='badge rounded-pill badge-skill'>${t}</span>`).join('')}</div><a href="${p.href||'#'}" class="small text-decoration-underline">${p.cta||'Voir détails'}</a></div></div>`;
+grid.appendChild(col);
+});
+};
+
+
+const renderEducation = (content) => {
+const grid = el('#educationGrid'); grid.innerHTML = '';
+(content.education||[]).forEach(ed => {
+const col = document.createElement('div'); col.className = 'col-md-6';
+col.innerHTML = `<div class="card border-0 shadow-sm card-hover h-100"><div class="card-body"><h3 class="h6">${ed.title}</h3>${ed.sub?`<small class='text-body-secondary'>${ed.sub}</small>`:''}<ul class="small text-body-secondary mt-3 mb-0 ps-3">${(ed.bullets||[]).map(b=>`<li>${b}</li>`).join('')}</ul></div></div>`;
+grid.appendChild(col);
+});
+};
+
+
+const renderContact = (content) => {
+el('#contactEmail').textContent = content.contact.email || '';
+el('#contactLinkedin').textContent = content.contact.linkedin || '';
+el('#contactGithub').textContent = content.contact.github || '';
+};
+
+
+async function renderAll(){
+const content = await loadContent();
+const merged = deepMerge(DEFAULT_CONTENT, content);
+renderHero(merged);
+renderStats(merged);
+renderAbout(merged);
+renderSkills(merged);
+renderExperience(merged);
+renderProjects(merged);
+renderEducation(merged);
+renderContact(merged);
+}
+
+
+renderAll();
+</script>
+</body>
+</html>

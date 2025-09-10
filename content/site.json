@@ -1,0 +1,39 @@
+{
+"hero": {
+"title": "Transformer la donnée en <span class=\"text-primary\">opportunités stratégiques</span>",
+"lead": "Ingénieur Data & BI passionné par la valorisation des données au service de l’innovation. Objectif : contribuer à bâtir un avenir où la technologie et l’IA propulsent l’Afrique vers le leadership numérique.",
+"avatar": ""
+},
+"stats": [
+{ "k": "+8 ans", "v": "Expérience" },
+{ "k": "MTN Guinée", "v": "BI & Applications" },
+{ "k": "Data & IA", "v": "Objectif leadership" },
+{ "k": "Oracle · Spark", "v": "Stack cœur" }
+],
+"about": {
+"p1": "Ingénieur informatique spécialisé en Data/BI et automatisation de rapports pour le secteur télécom.",
+"p2": "Ambition : devenir un leader technologique en Data & IA et porter des solutions à fort impact en Guinée et en Afrique.",
+"badges": ["Oracle","SQL","PL/SQL","Spark","Hadoop","Talend","Python","BI/Reporting","Linux/Bash"]
+},
+"skills": [
+{ "title": "Ingénierie Data", "items": ["Modélisation & pipelines","Spark/Hadoop","Talend ETL","Automatisation"] },
+{ "title": "Bases de données", "items": ["Oracle/SQL Server","PL/SQL","Partitions & perf","Backup/Recovery"] },
+{ "title": "BI & Reporting", "items": ["KPI télécom","Qualité & cohérence","Dashboards","Support utilisateurs"] },
+{ "title": "Langages & Outils", "items": ["Python","Linux/Bash","Git","MobaXterm"] }
+],
+"experience": [
+{ "role": "Ingénieur Services (Reporting) — MTN Guinée", "time": "2024–Aujourd’hui", "badge": "Oracle · SQL · BI", "points": ["Production hebdo/mensuelle des revenus RGS, SRV, GSM, MoMo","Optimisation requêtes Oracle (partitions, index, jobs)","Automatisation ETL & contrôle qualité des données","Support utilisateurs (BI & Applications)"] },
+{ "role": "Assistant DBA — Université GAN Conakry", "time": "2023–2024", "badge": "Sécurité · Sauvegarde · Tuning", "points": ["Gestion utilisateurs & sécurité","Sauvegarde & récupération","Tuning & monitoring","Documentation & audits"] }
+],
+"projects": [
+{ "name": "e‑Citoyen Guinée", "desc": "Plateforme de démarches administratives (anti‑corruption, services en ligne)", "tags": ["Django/Node?","PostgreSQL","API"], "cta": "Voir détails", "href": "#" },
+{ "name": "Chatbot étudiants", "desc": "FAQ intelligente pour questions académiques (NLP)", "tags": ["Python","LLM","Vector DB"], "cta": "Voir démo", "href": "#" },
+{ "name": "Pipelines Spark/Avro→CSV", "desc": "Extraction massive, conversion, livraison (HDFS/SCP)", "tags": ["Spark","Avro","HDFS"], "cta": "Voir script", "href": "#" },
+{ "name": "Automatisation Oracle BI", "desc": "Procédures PL/SQL (partitions, jobs, MV) pour KPIs télécom", "tags": ["Oracle","PL/SQL","Scheduler"], "cta": "Voir code", "href": "#" }
+],
+"education": [
+{ "title": "Licence en Ingénierie Informatique — UGAN Conakry", "sub": "Diplômé en juin 2022 — Génie Logiciel", "bullets": ["Cours : ML, Big Data, Data Viz, Data Eng, Sécurité","Projets : pipelines data, scripts Oracle, ETL Talend"] },
+{ "title": "Formations & Certifs (sélection)", "bullets": ["Administration Oracle (architecture, sauvegarde & perf)","Coursera : Data Engineering, English for Business","Programmes Data/IA (en cours)"] }
+],
+"contact": { "email": "ibsodiallo@example.com", "linkedin": "/in/ibrahima-sory-diallo", "github": "/ibsodiallo" }
+}
