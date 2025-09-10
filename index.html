@@ -32,3 +32,140 @@
           <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-outline-secondary ms-lg-3" type="button"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="py-5 border-bottom bg-body-tertiary">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 id="heroTitle" class="display-5 fw-bold mb-3"></h1>
+          <p id="heroLead" class="lead text-body-secondary mb-4"></p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#contact" class="btn btn-primary"><i class="bi bi-send"></i> Me contacter</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img id="avatar" class="rounded-circle border border-4 border-primary-subtle avatar-shadow img-fluid" alt="Photo professionnelle" src="" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUICK STATS -->
+  <section class="py-4"><div class="container"><div id="statsRow" class="row g-3"></div></div></section>
+
+  <!-- À PROPOS -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="h3 fw-semibold mb-4 section-title">À propos</h2>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm card-hover"><div class="card-body">
+            <p id="aboutP1"></p><p id="aboutP2" class="mb-0"></p>
+          </div></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm h-100 card-hover"><div class="card-body">
+            <div id="skillsBadges" class="d-flex flex-wrap gap-2"></div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="skills" class="py-5 bg-body-tertiary border-top border-bottom">
+    <div class="container"><h2 class="h3 fw-semibold mb-4 section-title">Compétences clés</h2><div id="skillsGrid" class="row g-4"></div></div>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section id="experience" class="py-5">
+    <div class="container"><h2 class="h3 fw-semibold mb-4 section-title">Expérience</h2><div id="experienceList" class="row g-4"></div></div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projects" class="py-5 bg-body-tertiary border-top border-bottom">
+    <div class="container"><h2 class="h3 fw-semibold mb-4 section-title">Projets sélectionnés</h2><div id="projectsGrid" class="row g-4"></div></div>
+  </section>
+
+  <!-- FORMATION -->
+  <section id="education" class="py-5">
+    <div class="container"><h2 class="h3 fw-semibold mb-4 section-title">Formation & Certifications</h2><div id="educationGrid" class="row g-4"></div></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-body-tertiary border-top">
+    <div class="container">
+      <h2 class="h3 fw-semibold mb-4 section-title">Contact</h2>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm card-hover"><div class="card-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6"><label class="form-label">Nom</label><input type="text" class="form-control" required></div>
+              <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+              <div class="col-12"><label class="form-label">Message</label><textarea class="form-control" rows="5" required></textarea></div>
+              <div class="col-12 d-flex justify-content-end gap-2"><button type="reset" class="btn btn-outline-secondary">Effacer</button><button type="submit" class="btn btn-primary">Envoyer</button></div>
+            </form>
+          </div></div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm h-100 card-hover"><div class="card-body">
+            <p class="mb-1"><i class="bi bi-envelope"></i> <strong>Email</strong></p><p id="contactEmail" class="text-body-secondary small"></p>
+            <p class="mb-1"><i class="bi bi-linkedin"></i> <strong>LinkedIn</strong></p><p id="contactLinkedin" class="text-body-secondary small"></p>
+            <p class="mb-1"><i class="bi bi-github"></i> <strong>GitHub</strong></p><p id="contactGithub" class="text-body-secondary small"></p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-body-secondary gap-2">
+      <div>© <span id="year"></span> Ibrahima Sory Diallo — Tous droits réservés.</div>
+      <div class="d-flex gap-3">
+        <a class="link-secondary" href="#about">À propos</a>
+        <a class="link-secondary" href="#projects">Projets</a>
+        <a class="link-secondary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Year & theme
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const root = document.documentElement, btn = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme'); if (stored) root.setAttribute('data-bs-theme', stored);
+    btn?.addEventListener('click', () => { const cur = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark'; root.setAttribute('data-bs-theme', cur); localStorage.setItem('theme', cur); });
+
+    // Load content/site.json
+    const DEFAULT_CONTENT = { hero:{title:'',lead:'',avatar:''}, stats:[], about:{p1:'',p2:'',badges:[]}, skills:[], experience:[], projects:[], education:[], contact:{email:'',linkedin:'',github:''} };
+    const deepMerge = (b,o)=>{ if(!o)return structuredClone(b); if(Array.isArray(b)&&Array.isArray(o))return o; if(typeof b==='object'&&typeof o==='object'){const out={...b}; for(const k of Object.keys(o)) out[k]=deepMerge(b[k],o[k]); return out;} return o??b; };
+    async function loadContent(){ try{ const r = await fetch('content/site.json',{cache:'no-cache'}); if(!r.ok) throw 0; return await r.json(); } catch { return structuredClone(DEFAULT_CONTENT); } }
+    const el = s => document.querySelector(s);
+
+    const renderStats = c => { const row = el('#statsRow'); row.innerHTML=''; (c.stats||[]).forEach(s=>{ const d=document.createElement('div'); d.className='col-6 col-md-3'; d.innerHTML=`<div class="rounded-4 p-3 stat-card text-center h-100"><div class="h5 mb-0 fw-semibold">${s.k}</div><div class="text-body-secondary small">${s.v}</div></div>`; row.appendChild(d); }); };
+    const renderHero = c => { el('#heroTitle').innerHTML=c.hero.title||''; el('#heroLead').textContent=c.hero.lead||''; if(c.hero.avatar) el('#avatar').src=c.hero.avatar; };
+    const renderAbout = c => { el('#aboutP1').textContent=c.about.p1||''; el('#aboutP2').textContent=c.about.p2||''; const b=el('#skillsBadges'); b.innerHTML=''; (c.about.badges||[]).forEach(x=>{ const s=document.createElement('span'); s.className='badge rounded-pill badge-skill'; s.textContent=x; b.appendChild(s); }); };
+    const renderSkills = c => { const g=el('#skillsGrid'); g.innerHTML=''; (c.skills||[]).forEach(sec=>{ const d=document.createElement('div'); d.className='col-md-6 col-lg-3'; d.innerHTML=`<div class="card h-100 border-0 shadow-sm card-hover"><div class="card-body"><h3 class="h6">${sec.title}</h3><ul class="small text-body-secondary ps-3 mb-0">${(sec.items||[]).map(i=>'<li>'+i+'</li>').join('')}</ul></div></div>`; g.appendChild(d); }); };
+    const renderExperience = c => { const list=el('#experienceList'); list.innerHTML=''; (c.experience||[]).forEach(e=>{ const d=document.createElement('div'); d.className='col-12'; d.innerHTML=`<div class="card border-0 shadow-sm card-hover h-100"><div class="card-body"><div class="d-flex justify-content-between flex-wrap gap-2"><div><h3 class="h6 mb-0">${e.role}</h3><small class="text-body-secondary">${e.time}</small></div><span class="badge rounded-pill badge-skill">${e.badge||''}</span></div><ul class="small text-body-secondary mt-3 mb-0 ps-3">${(e.points||[]).map(p=>'<li>'+p+'</li>').join('')}</ul></div></div>`; list.appendChild(d); }); };
+    const renderProjects = c => { const g=el('#projectsGrid'); g.innerHTML=''; (c.projects||[]).forEach(p=>{ const d=document.createElement('div'); d.className='col-md-6 col-lg-3'; d.innerHTML=`<div class="card h-100 border-0 shadow-sm card-hover"><div class="card-body"><div class="ratio ratio-16x9 rounded-3 bg-body-secondary mb-2"></div><h3 class="h6">${p.name}</h3><p class="small text-body-secondary mb-2">${p.desc}</p><div class="d-flex flex-wrap gap-1 mb-2">${(p.tags||[]).map(t=>'<span class="badge rounded-pill badge-skill">'+t+'</span>').join('')}</div><a href="${p.href||'#'}" class="small text-decoration-underline">${p.cta||'Voir détails'}</a></div></div>`; g.appendChild(d); }); };
+    const renderEducation = c => { const g=el('#educationGrid'); g.innerHTML=''; (c.education||[]).forEach(ed=>{ const d=document.createElement('div'); d.className='col-md-6'; d.innerHTML=`<div class="card border-0 shadow-sm card-hover h-100"><div class="card-body"><h3 class="h6">${ed.title}</h3>${ed.sub?'<small class="text-body-secondary">'+ed.sub+'</small>':''}<ul class="small text-body-secondary mt-3 mb-0 ps-3">${(ed.bullets||[]).map(b=>'<li>'+b+'</li>').join('')}</ul></div></div>`; g.appendChild(d); }); };
+    const renderContact = c => { el('#contactEmail').textContent=c.contact.email||''; el('#contactLinkedin').textContent=c.contact.linkedin||''; el('#contactGithub').textContent=c.contact.github||''; };
+
+    (async function renderAll(){
+      const content = await loadContent(); const merged = deepMerge(DEFAULT_CONTENT, content);
+      renderHero(merged); renderStats(merged); renderAbout(merged); renderSkills(merged);
+      renderExperience(merged); renderProjects(merged); renderEducation(merged); renderContact(merged);
+    })();
+  </script>
+</body>
+</html>
